@@ -1,0 +1,53 @@
+name: testpatrolflavor
+description: A new Flutter project.
+
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.0.6 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.0
+  flutter_flavorizr: ^2.2.1
+  patrol: ^2.2.3
+
+
+flutter:
+  uses-material-design: true
+
+
+flavorizr:
+  flavors:
+    dev:
+      app:
+        name: "testpatrolflavor"
+      android:
+        applicationId: "com.example.testpatrolflavor.dev"
+      ios:
+          bundleId: "com.example.testpatrolflavor.dev"
+
+    prod:
+      app:
+        name: "testpatrolflavor"
+      android:
+        applicationId: "com.example.testpatrolflavor"
+      ios:
+        bundleId: "com.example.testpatrolflavor"
+
+patrol:
+  flavor: prod
+  android:
+    package_name: com.example.testpatrolflavor
+  ios:
+    bundle_id: com.example.testpatrolflavor
