@@ -3,7 +3,7 @@ import 'package:patrol/patrol.dart';
 import 'package:testpatrol/main.dart';
 
 void main() {
-  patrolTest('', ($) async {
+  patrolTest('click test', nativeAutomation: true, ($) async {
     await $.pumpWidgetAndSettle(const MyApp());
     for (var i = 0; i < 5; i++) {
       await $(#increment).tap();
